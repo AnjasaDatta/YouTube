@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+//AIzaSyAvu0KqcIbLgrbSiwv-KaiUriC1sBYZwYc
 const Youtube = () => {
   const [result, setResult] = useState([]);
   const [search, setSearch] = useState(-1);
@@ -10,7 +10,7 @@ const Youtube = () => {
 
   function getResult() {
     const maxResults = search;
-    const finalURL = `https://www.googleapis.com/youtube/v3/search?key=AIzaSyAvu0KqcIbLgrbSiwv-KaiUriC1sBYZwYc&channelId=UCXgGY0wkgOzynnHvSEVmE3A&part=snippet,id&order=date&maxResults=${maxResults}`;
+    const finalURL = `https://www.googleapis.com/youtube/v3/search?key={}&channelId=UCXgGY0wkgOzynnHvSEVmE3A&part=snippet,id&order=date&maxResults=${maxResults}`;
     fetch(finalURL)
       .then(response => response.json())
       .then(data => {
